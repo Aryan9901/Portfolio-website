@@ -270,7 +270,7 @@ slide1.forEach(function (elem) {
 			scroller: "#main",
 			start: "top 45%",
 			end: "top -90%",
-			markers: true,
+			// markers: true,
 			scrub: 2,
 		},
 	});
@@ -290,4 +290,20 @@ slide2.forEach(function (elem) {
 			scrub: 2,
 		},
 	});
+});
+
+// projects rows animation
+gsap.from("#projects .projrow", {
+	gap: "8vw",
+	rotate: "-10deg",
+	opacity: 0,
+	ease: Expo.easeInOut.power2,
+	scrollTrigger: {
+		scrub: 1,
+		scroller: "#main",
+		trigger: "#projects .projrow",
+		markers: true,
+		start: "top 60%",
+		end: "top -20%",
+	},
 });

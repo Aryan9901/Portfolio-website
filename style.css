@@ -13,13 +13,9 @@ html {
 	width: 100%;
 }
 
-#main {
-	/* width: 100%; */
-	/* position: relative; */
-}
 /* loader */
 #loader {
-	/* display: none; */
+	display: none;
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -72,7 +68,7 @@ html {
 	display: block;
 }
 #green {
-	/* display: none; */
+	display: none;
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -619,3 +615,57 @@ polyline {
 	line-height: 22vh;
 	margin: 0vw 0;
 }
+
+/* projects section */
+#projects {
+	min-height: 100vh;
+	width: 100%;
+	/* background-color: red; */
+}
+#projects .projrow {
+	height: 50vh;
+	width: 100%;
+	/* background-color: #14cf93; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 4vw;
+	gap: 4vw;
+	margin: 4vw 0;
+}
+.projrow .proj {
+	height: 100%;
+	width: 27%;
+	background-color: #f3f3f3;
+	border-top: 0.23vw solid salmon;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 2vw;
+	justify-content: center;
+	row-gap: 2vw;
+}
+.projrow .proj h1 {
+	width: 40%;
+	white-space: nowrap;
+	font-size: 1.3vw;
+	color: red;
+	font-family: Gilroy;
+}
+.projrow .proj h2 {
+	width: 100%;
+	font-size: 2.5vw;
+	color: rgb(121 69 93);
+	transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.projrow .proj h2:hover {
+	color: #08fdd8;
+}
+.projrow .proj p {
+	width: 80%;
+	columns: #6a5964;
+	font-size: 1.2vw;
+}
+
+/* honors div */
