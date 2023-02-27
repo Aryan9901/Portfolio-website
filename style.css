@@ -1,4 +1,8 @@
 /** @format */
+@font-face {
+	font-family: lorula;
+	src: url(LaBelleAurore-Regular.ttf);
+}
 
 * {
 	margin: 0px;
@@ -15,7 +19,7 @@ html {
 
 /* loader */
 #loader {
-	display: none;
+	/* display: none; */
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -68,7 +72,7 @@ html {
 	display: block;
 }
 #green {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -669,3 +673,117 @@ polyline {
 }
 
 /* honors div */
+#contactdet {
+	min-height: 180vh;
+	width: 100%;
+	/* background-color: red; */
+	display: flex;
+	margin-top: 8vw;
+}
+/* contact form */
+#contactdet #form {
+	width: 60%;
+	height: 180vh;
+	/* background-color: blue; */
+	position: relative;
+	/* padding: 0 1vw; */
+}
+#form h1 {
+	font-size: 13rem;
+	margin-top: 2vw;
+	line-height: 1.4;
+	/* background-color: red; */
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	height: fit-content;
+	letter-spacing: 0.4vw;
+	font-family: lorula;
+	margin-bottom: 0;
+}
+#form p {
+	font-size: 1.3rem;
+	position: absolute;
+	top: 33%;
+	left: 43%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	text-align: start;
+	font-family: Gilroy;
+}
+#form input {
+	margin-top: 9vw;
+	background-color: #b4b4b4;
+	/* background-color: transparent; */
+	/* border-top: 0.13vw solid #08fdd8; */
+	/* border-bottom: 0.13vw solid #08fdd8; */
+	border: 0.13vw solid #08fdd8;
+	padding: 2vw 2.3vw;
+	display: inline-block;
+	/* margin: 0 auto; */
+	/* border: none; */
+	outline: none;
+	/* border-left: none; */
+	/* border-right: none; */
+	transform: skew(-2deg);
+}
+#form #name {
+	margin-top: 11vw;
+	width: 48%;
+	margin-right: 0.4vw;
+	font-size: 1.5rem;
+	margin-left: 1vw;
+}
+#form #email {
+	margin-top: 11vw;
+	width: 48%;
+	font-size: 1.5rem;
+}
+#form #number {
+	margin-top: 1vw;
+	width: 98%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.7vw;
+}
+#form #message {
+	margin-top: 1vw;
+	width: 98%;
+	margin-left: auto;
+	display: block;
+	margin-right: auto;
+	height: 40vh;
+	font-size: 2vw;
+	/* white-space: wrap; */
+	padding: 0vw 0.7vw;
+}
+#form #message::placeholder {
+	font-size: 4vw;
+	font-weight: 600;
+	color: #fcfcfc;
+	opacity: 1;
+}
+
+#form #submit {
+	width: 30%;
+	height: 15vh;
+	margin-top: 1vw;
+	display: block;
+	color: #000;
+	background-color: transparent;
+	margin: 1vw 1vw 1vw auto;
+	position: relative;
+	font-size: 2rem;
+}
+
+#form #submit:hover {
+	background-color: #08fdd8;
+}
+
+/* map of my location */
+#contactdet #map {
+	width: 40%;
+	height: 180vh;
+	background-color: #08fdd8;
+}

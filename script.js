@@ -302,7 +302,7 @@ gsap.from("#projects .projrow", {
 		scrub: 1,
 		scroller: "#main",
 		trigger: "#projects .projrow",
-		markers: true,
+		// markers: true,
 		start: "top 60%",
 		end: "top -20%",
 	},
