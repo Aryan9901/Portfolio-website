@@ -307,3 +307,38 @@ gsap.from("#projects .projrow", {
 		end: "top -20%",
 	},
 });
+
+// footer
+
+var tl = gsap.timeline({
+	scrollTrigger: {
+		scroller: "#main",
+		trigger: "#footer #circle",
+		// markers: true,
+		start: "top 60%",
+		scrub: 2,
+		end: "top -20%",
+	},
+});
+tl.to("#footer #circle", {
+	top: "67%",
+	ease: Expo.easeInOut.power2,
+})
+	.to(
+		"#footer #circle",
+		{
+			top: "120%",
+			ease: Expo.easeInOut.power2,
+		},
+		"hello"
+	)
+
+	.to(
+		"#footxt h1,#footxt h2,#footxt h3",
+		{
+			rotateX: "0deg",
+			delay: -0.3,
+			ease: Expo.easeInOut.power2,
+		},
+		"hello"
+	);

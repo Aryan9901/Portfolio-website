@@ -71,6 +71,10 @@ html {
 .reveal .parent .child {
 	display: block;
 }
+
+::-webkit-scrollbar-thumb {
+	background: #14cf93;
+}
 #green {
 	/* display: none; */
 	position: absolute;
@@ -572,11 +576,13 @@ polyline {
 	object-fit: cover;
 	/* object-position: center; */
 	border-radius: 3vw;
+	height: 70vh;
 	transform-origin: 0% 0%;
 	transform: rotate(-150deg);
 }
 #preview .sumprev img {
 	width: 130%;
+	height: 110%;
 }
 /* marque effect */
 #marque {
@@ -787,3 +793,175 @@ polyline {
 	height: 180vh;
 	background-color: #08fdd8;
 }
+/* footer */
+#footer {
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	background-color: #253b39;
+	/* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5700, 0, 1); */
+	position: relative;
+}
+#footer #circle {
+	height: 50vw;
+	width: 45vw;
+	/* background-color: red; */
+	border-radius: 50%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	transform-origin: 50% 50%;
+	overflow: hidden;
+	transform: translate(-50%, -50%) scaleX(1.4);
+}
+#footer #circle #ftop {
+	background: linear-gradient(to bottom, #6e7c7b, transparent);
+	width: 100%;
+	height: 55%;
+	/* background-color: #6e7c7b; */
+	/* background-color: #08fdd8; */
+}
+#footer #circle #fbtm {
+	width: 100%;
+	height: 45%;
+	/* background-color: transparent; */
+	/* background: linear-gradient(to bottom, #6e7c7b, transparent); */
+}
+#footxt {
+	/* height: 40vh; */
+	width: 60%;
+	margin: 2vw auto;
+	/* background-color: #fff; */
+	font-size: 4vw;
+	font-weight: 900;
+	text-align: center;
+	line-height: 1.3;
+	color: #fcfcfc;
+}
+#footer #footxt h1 {
+	font-size: 5vw;
+	font-weight: 900;
+	transform-origin: 50% 50%;
+	transform: rotateX(-90deg);
+}
+#footer #footxt h2 {
+	font-size: 5.2vw;
+	font-weight: 900;
+	transform-origin: 50% 50%;
+	transform: rotateX(-90deg);
+}
+#footer #footxt h3 {
+	font-size: 5.5vw;
+	font-weight: 900;
+	transform-origin: 50% 50%;
+	transform: rotateX(-90deg);
+}
+#socials {
+	width: 100%;
+	padding: 1vw 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 10%;
+	z-index: 3;
+}
+#socials .socialcard {
+	height: 20vh;
+	width: 22%;
+	/* background-color: yellow; */
+	position: relative;
+	transition: 0.6s cubic-bezier(0, 0.89, 0.41, 1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0vw;
+}
+#socials .socialcard .name {
+	font-size: 2.6vw;
+	font-weight: 600;
+}
+#socials .socialcard .name h1 {
+	font-size: 2.7vw;
+	color: #fef3f8;
+}
+#socials .socialcard .name p {
+	font-size: 1.3vw;
+	color: #fcfcfc;
+}
+#socials .socialcard .iconcnt {
+	height: 4.2vw;
+	width: 4.2vw;
+	border-radius: 50%;
+	background-color: #fcfcfc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#socials .socialcard .iconcnt i {
+	font-size: 1.9vw;
+	font-weight: 800;
+	color: #222;
+}
+#socials .socialcard .sover {
+	position: absolute;
+	height: 1.7%;
+	width: 100%;
+	top: 0;
+	background-color: #08fdd8;
+	z-index: 3;
+}
+#socials .socialcard:hover {
+	animation-name: padd;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	animation-fill-mode: forwards;
+}
+#socials .socialcard:hover .sover {
+	z-index: -1;
+	animation-name: bgfull;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	animation-fill-mode: forwards;
+}
+@keyframes padd {
+	0% {
+		justify-content: space-between;
+		/* padding: 0 0vw; */
+	}
+	100% {
+		justify-content: space-evenly;
+		/* padding: 0 2vw; */
+	}
+}
+@keyframes bgfull {
+	0% {
+		height: 1.7%;
+	}
+	100% {
+		height: 100%;
+	}
+}
+/* #socials .socialcard::before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1.6%;
+	width: 100%;
+	background-color: red;
+	z-index: 12;
+}
+#socials .socialcard:hover .socialcard::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	z-index: 12;
+} */
