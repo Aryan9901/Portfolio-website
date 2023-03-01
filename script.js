@@ -100,12 +100,8 @@ function animateHomepage() {
 			},
 		});
 }
-function locoinitialise() {
-	// const scroll = new LocomotiveScroll({
-	// 	el: document.querySelector("#main"),
-	// 	smooth: true,
-	// });
 
+function locoinitialise() {
 	const locoScroll = new LocomotiveScroll({
 		el: document.querySelector("#main"),
 		smooth: true,
@@ -133,9 +129,7 @@ function locoinitialise() {
 
 		// follwoing line is not required to work pinning on touch screen
 
-		/* pinType: document.querySelector(".smooth-scroll").style.transform
-		  ? "transform"
-		  : "fixed"*/
+		pinType: document.querySelector("#main").style.transform ? "transform" : "fixed",
 	});
 
 	// --- RED PANEL ---
@@ -187,6 +181,7 @@ function locoinitialise() {
 
 	ScrollTrigger.refresh();
 }
+
 function cardHoverEffect() {
 	document.querySelectorAll("#imgcnt .containers").forEach(function (cnt) {
 		var show;
@@ -314,10 +309,11 @@ var tl = gsap.timeline({
 	scrollTrigger: {
 		scroller: "#main",
 		trigger: "#footer #circle",
-		// markers: true,
-		start: "top 60%",
+		markers: true,
+		start: "top 180%",
 		scrub: 2,
-		end: "top -20%",
+		end: "top 140%",
+		// pin: true,
 	},
 });
 tl.to("#footer #circle", {

@@ -16,10 +16,13 @@ html {
 	height: 100%;
 	width: 100%;
 }
-
+#main{
+	overflow: hidden;
+	overflow-y: hidden;
+}
 /* loader */
 #loader {
-	/* display: none; */
+	display: none;
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -76,7 +79,7 @@ html {
 	background: #14cf93;
 }
 #green {
-	/* display: none; */
+	display: none;
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -631,43 +634,90 @@ polyline {
 	min-height: 100vh;
 	width: 100%;
 	/* background-color: red; */
-}
-#projects .projrow {
-	height: 50vh;
-	width: 100%;
-	/* background-color: #14cf93; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 4vw;
-	gap: 4vw;
-	margin: 4vw 0;
+	margin-bottom: 10vw;
 }
-.projrow .proj {
-	height: 100%;
-	width: 27%;
-	background-color: #f3f3f3;
-	border-top: 0.23vw solid salmon;
+#projects .projrow {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+#projects .column {
+	flex: 25%;
+	max-width: 33%;
+	padding: 0 4px;
+	/* background-color: blue; */
+}
+#projects .column .proj {
+	min-height: 40vh;
+	width: 97%;
+	margin: 1vw 1vw;
+	/* background-color: #f3f3f3; */
+	background-color: transparent;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-left: 2vw;
 	justify-content: center;
 	row-gap: 2vw;
+	position: relative;
+	padding-top: 1.5vw;
+	padding-bottom: 1.5vw;
+	/* z-index: 1; */
 }
+#projects .gree .proj::before {
+	content: "";
+	position: absolute;
+	height: 1%;
+	width: 100%;
+	top: 0;
+	background-color: rgb(173, 29, 115);
+	z-index: -1;
+}
+#projects .re .proj::before {
+	content: "";
+	position: absolute;
+	height: 1%;
+	width: 100%;
+	top: 0;
+	background-color: rgb(42, 197, 208);
+	z-index: -1;
+}
+#projects .ble .proj::before {
+	content: "";
+	position: absolute;
+	height: 1%;
+	width: 100%;
+	top: 0;
+	background-color: rgb(234, 215, 47);
+	z-index: -1;
+}
+#projects .pin .proj::before {
+	content: "";
+	position: absolute;
+	height: 1%;
+	width: 100%;
+	top: 0;
+	background-color: rgb(31, 205, 153);
+	z-index: -1;
+}
+
 .projrow .proj h1 {
 	width: 40%;
 	white-space: nowrap;
 	font-size: 1.3vw;
 	color: red;
 	font-family: Gilroy;
+	margin-left: 1vw;
 }
 .projrow .proj h2 {
 	width: 100%;
 	font-size: 2.5vw;
 	color: rgb(121 69 93);
 	transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+	margin-left: 1vw;
 }
 .projrow .proj h2:hover {
 	color: #08fdd8;
@@ -676,9 +726,10 @@ polyline {
 	width: 80%;
 	columns: #6a5964;
 	font-size: 1.2vw;
+	margin-left: 1vw;
 }
 
-/* honors div */
+/* contact div */
 #contactdet {
 	min-height: 180vh;
 	width: 100%;
@@ -688,7 +739,7 @@ polyline {
 }
 /* contact form */
 #contactdet #form {
-	width: 60%;
+	width: 100%;
 	height: 180vh;
 	/* background-color: blue; */
 	position: relative;
@@ -786,13 +837,6 @@ polyline {
 #form #submit:hover {
 	background-color: #08fdd8;
 }
-
-/* map of my location */
-#contactdet #map {
-	width: 40%;
-	height: 180vh;
-	background-color: #08fdd8;
-}
 /* footer */
 #footer {
 	height: 100vh;
@@ -801,6 +845,8 @@ polyline {
 	background-color: #253b39;
 	/* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5700, 0, 1); */
 	position: relative;
+	/* bottom: 0; */
+	/* background-color: red; */
 }
 #footer #circle {
 	height: 50vw;
@@ -903,6 +949,7 @@ polyline {
 #socials .socialcard .iconcnt i {
 	font-size: 1.9vw;
 	font-weight: 800;
+	/* color: #08fdd8; */
 	color: #222;
 }
 #socials .socialcard .sover {
@@ -944,24 +991,100 @@ polyline {
 		height: 100%;
 	}
 }
-/* #socials .socialcard::before {
-	content: "";
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 1.6%;
-	width: 100%;
-	background-color: red;
-	z-index: 12;
+
+/* meadia query */
+
+/* for width 989px */
+@media (max-width: 989px) {
+	/* workdetails */
+	#workdetails {
+		min-height: 100vh;
+	}
+	#workdetails .details {
+		min-height: 80vh;
+		justify-content: space-evenly;
+	}
+	#workdetails .details .work {
+		width: 55%;
+	}
+	#workdetails .work img {
+		width: 105%;
+	}
+	#workdetails .info .caps {
+		background-color: #fff;
+		padding: 1vw 2.3vw;
+	}
+	#workdetails .info .caps p {
+		font-size: 1.8vw;
+	}
+	/* worksummary */
+	#worksummary {
+		min-height: 410vh;
+		background-color: #dadafa;
+		padding-top: 22vw;
+	}
+	#worksummary::before {
+		content: "";
+		width: 100%;
+		height: 150px;
+		position: absolute;
+		background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+		background-size: cover;
+		transform: rotate(-180deg);
+		top: -95px;
+		/* z-index: -2; */
+	}
+	#worksummary > h1 {
+		font-size: 6vw;
+		font-weight: 900;
+		margin-left: 3vw;
+		position: relative;
+		z-index: 1;
+	}
+	#worksummary #preview {
+		min-height: 80vh;
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		position: absolute;
+		top: 21%;
+		left: 0;
+		/* background-color: red; */
+		z-index: 0;
+		padding: 1vw 3vw;
+		overflow: hidden;
+	}
+	#preview .sumprev {
+		/* height: 25vw; */
+		overflow: hidden;
+		width: 19vw;
+		/* background-color: blanchedalmond; */
+		object-fit: cover;
+		/* object-position: center; */
+		border-radius: 3vw;
+		height: 70vh;
+		transform-origin: 0% 0%;
+		transform: rotate(-150deg);
+	}
+	#preview .sumprev img {
+		width: 130%;
+		height: 110%;
+	}
 }
-#socials .socialcard:hover .socialcard::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: red;
-	z-index: 12;
-} */
+
+/* max width 800px */
+@media (max-width: 800px) {
+	#projects .column {
+		flex: 50%;
+		max-width: 65%;1
+	}
+}
+
+/* max width 600px */
+@media (max-width: 600px) {
+	#projects .column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
