@@ -15,7 +15,23 @@ body,
 html {
 	height: 100%;
 	width: 100%;
+	/* scrollbar-color: red yellow; */
 }
+body::-webkit-scrollbar {
+	width: 1em;
+  }
+  body::-webkit-scrollbar-track {
+	/* display: none; */
+	background: #fef3f8;
+}
+body::-webkit-scrollbar-thumb {
+	  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #08fdd8;
+	height: 4.5vw;
+	/* width: 1vw; */
+	border-radius: 2vw;
+	outline: 1px solid slategrey;
+  }
 #main{
 	overflow: hidden;
 	overflow-y: hidden;

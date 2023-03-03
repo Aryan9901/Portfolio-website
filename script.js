@@ -177,8 +177,8 @@ function locoinitialise() {
 		.from(".line-3", { scaleX: 0, transformOrigin: "left center", ease: "none" }, 0)
 		.to(".purple", { backgroundColor: "#28a92b" }, 0);
 
+	var scrollContainer = document.querySelector("#main");
 	ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
 	ScrollTrigger.refresh();
 }
 
@@ -206,7 +206,7 @@ function cardHoverEffect() {
 revealToSpan();
 valueSetters();
 loaderAnimation();
-locoinitialise();
+// locoinitialise();
 cardHoverEffect();
 
 // ye pehle se comment the inko comment out mat karna
@@ -225,7 +225,7 @@ t1.to(
 		duration: 19,
 		scrollTrigger: {
 			trigger: "#worksummary h1",
-			scroller: "#main",
+			scroller: "body",
 			scrub: 2,
 			// markers: true,
 			start: "top 38%",
@@ -243,7 +243,7 @@ t1.to(
 		duration: 2,
 		scrollTrigger: {
 			trigger: "#worksummary #preview .sumprev",
-			scroller: "#main",
+			scroller: "body",
 			scrub: 2,
 			// markers: true,
 			start: "top 20%",
@@ -262,7 +262,7 @@ slide1.forEach(function (elem) {
 		duration: 4,
 		scrollTrigger: {
 			trigger: "#marque #slide1 h1",
-			scroller: "#main",
+			scroller: "body",
 			start: "top 45%",
 			end: "top -90%",
 			// markers: true,
@@ -278,7 +278,7 @@ slide2.forEach(function (elem) {
 		duration: 4,
 		scrollTrigger: {
 			trigger: "#marque #slide2 h1",
-			scroller: "#main",
+			scroller: "body",
 			start: "top 65%",
 			end: "top -10%",
 			// markers: true,
@@ -295,7 +295,7 @@ gsap.from("#projects .projrow", {
 	ease: Expo.easeInOut.power2,
 	scrollTrigger: {
 		scrub: 1,
-		scroller: "#main",
+		scroller: "body",
 		trigger: "#projects .projrow",
 		// markers: true,
 		start: "top 60%",
@@ -307,12 +307,12 @@ gsap.from("#projects .projrow", {
 
 var tl = gsap.timeline({
 	scrollTrigger: {
-		scroller: "#main",
+		scroller: "body",
 		trigger: "#footer #circle",
-		markers: true,
-		start: "top 180%",
+		// markers: true,
+		start: "top 80%",
 		scrub: 2,
-		end: "top 140%",
+		end: "top 0%",
 		// pin: true,
 	},
 });
