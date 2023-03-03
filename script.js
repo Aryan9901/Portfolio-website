@@ -309,10 +309,10 @@ var tl = gsap.timeline({
 	scrollTrigger: {
 		scroller: "body",
 		trigger: "#footer #circle",
-		// markers: true,
+		markers: true,
 		start: "top 80%",
 		scrub: 2,
-		end: "top 0%",
+		end: "top 20%",
 		// pin: true,
 	},
 });
