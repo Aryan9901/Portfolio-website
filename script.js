@@ -309,15 +309,15 @@ var tl = gsap.timeline({
 	scrollTrigger: {
 		scroller: "body",
 		trigger: "#footer #circle",
-		markers: true,
-		start: "top 80%",
+		// markers: true,
+		start: "top 50%",
 		scrub: 2,
-		end: "top 20%",
+		end: "top 10%",
 		// pin: true,
 	},
 });
 tl.to("#footer #circle", {
-	top: "67%",
+	top: "72%",
 	ease: Expo.easeInOut.power2,
 })
 	.to(

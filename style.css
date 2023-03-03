@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* loader */
 #loader {
-	display: none;
+	/* display: none; */
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -95,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 	background: #14cf93;
 }
 #green {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -872,7 +872,7 @@ polyline {
 	/* background-color: red; */
 	border-radius: 50%;
 	position: absolute;
-	top: 40%;
+	top: 20%;
 	left: 50%;
 	z-index: 1;
 	transform: translate(-50%, -50%);
@@ -1133,7 +1133,13 @@ polyline {
 		height: 80vh;
 	}
 }
-
+@media (max-width: 640px) {
+	#footer #circle {
+		height: 55vw;
+		width: 50vw;
+		top: -10%;
+	}
+}
 /* max width 600px */
 @media (max-width: 600px) {
 	#projects .column {
@@ -1174,7 +1180,7 @@ polyline {
 	#footer #circle {
 		height: 55vw;
 		width: 50vw;
-		top: 10%;
+		top: -10%;
 	}
 	#footxt {
 		font-size: 5vw;
