@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* loader */
 #loader {
-	display: none;
+	/* display: none; */
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -95,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 	background: #14cf93;
 }
 #green {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	top: 100%;
 	z-index: 999;
