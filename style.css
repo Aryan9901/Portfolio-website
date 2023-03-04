@@ -1185,6 +1185,43 @@ polyline {
 		font-size: 3.3vw;
 		font-weight: 900;
 	}
+	/* work details divs */
+	#workdetails {
+		min-height: 150vh;
+		padding: 0 2vw;
+		padding-bottom: 9vw;
+	}
+	#workdetails .details {
+		flex-direction: column;
+		padding-bottom: 4vw;
+		border-bottom: 0.2vw solid #fcfcfc;
+		align-items: flex-start;
+		padding-left: 4vw;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		margin-bottom: 2vw;
+	}
+	#workdetails .details .work {
+		width: 85%;
+		border-radius: 3vw;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	}
+	#workdetails .work img {
+		width: 105%;
+	}
+	#workdetails .details .info {
+		width: 70%;
+		min-height: 40vh;
+		/* background-color: #333; */
+		padding-left: 1vw;
+	}
+	#workdetails .info .caps {
+		height: 9vh;
+		border-radius: 4.4vw;
+		padding: 1.3vw 5vw;
+	}
+	#workdetails .info .caps p {
+		font-size: 3vw;
+	}
 }
 
 @media (max-width: 510px) {
@@ -1280,6 +1317,16 @@ polyline {
 	#marque h1 {
 		font-size: 29vw;
 		line-height: 18vh;
+	}
+	/* work details */
+	#workdetails .info .caps p {
+		font-size: 5vw;
+	}
+	#workdetails .details .info {
+		width: 100%;
+		min-height: 40vh;
+		/* background-color: #333; */
+		padding-left: 1vw;
 	}
 }
 /* max-width less than 370 px */
