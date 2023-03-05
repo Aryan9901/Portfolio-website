@@ -374,7 +374,7 @@ gsap.from("#imgrig .imgcntnr", {
 	// opacity: 0,
 	ease: Expo.easeInOut.power2,
 	scrollTrigger: {
-		markers: true,
+		// markers: true,
 		scroller: "body",
 		trigger: "#imgrig .imgcntnr",
 		start: "top 40%",
