@@ -354,3 +354,31 @@ tl.to("#footer #circle", {
 		},
 		"hello"
 	);
+
+// cursor change
+function cursorchange() {
+	var cur1 = document.querySelector("#circursor1");
+	var cur2 = document.querySelector("#circursor2");
+	document.querySelector("#main").addEventListener("mousemove", function (dets) {
+		cur1.style.top = dets.pageY + "px";
+		cur2.style.top = dets.pageY + "px";
+		cur1.style.left = dets.pageX + "px";
+		cur2.style.left = dets.pageX + "px";
+	});
+}
+cursorchange();
+
+// three card rotate
+gsap.from("#imgrig .imgcntnr", {
+	rotate: "0deg",
+	// opacity: 0,
+	ease: Expo.easeInOut.power2,
+	scrollTrigger: {
+		markers: true,
+		scroller: "body",
+		trigger: "#imgrig .imgcntnr",
+		start: "top 40%",
+		scrub: 2,
+		end: "top -10%",
+	},
+});
