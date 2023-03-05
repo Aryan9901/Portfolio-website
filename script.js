@@ -183,15 +183,13 @@ function locoinitialise() {
 }
 
 function cardHoverEffect() {
-	document.querySelectorAll("#imgcnt .containers").forEach(function (cnt) {
+	document.querySelectorAll(".containers").forEach(function (cnt) {
 		var show;
 		cnt.addEventListener("mousemove", function (dets) {
 			document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
 			show = dets.target;
-			document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.pageX - 50}px`;
-			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY + 0}px`;
-			// document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.x - 150}px`;
-			// document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.y - 60}px`;
+			document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.pageX}px`;
+			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY}px`;
 			show.style.filter = "grayscale(1)";
 			document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
 		});
@@ -202,6 +200,24 @@ function cardHoverEffect() {
 		});
 	});
 }
+// function cardHoverEffect() {
+// 	document.querySelectorAll("#imgcnt .containers").forEach(function (cnt) {
+// 		var show;
+// 		cnt.addEventListener("mousemove", function (dets) {
+// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
+// 			show = dets.target;
+// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.pageX - 50}px`;
+// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY - 2200}px`;
+// 			show.style.filter = "grayscale(1)";
+// 			document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
+// 		});
+// 		cnt.addEventListener("mouseleave", function (dets) {
+// 			document.querySelector("#cursor").children[show.dataset.index].style.opacity = 0;
+// 			show.style.filter = "grayscale(0)";
+// 			document.querySelector("#work").style.backgroundColor = "#f2f2f2";
+// 		});
+// 	});
+// }
 
 revealToSpan();
 valueSetters();
