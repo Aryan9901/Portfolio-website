@@ -48,14 +48,14 @@ function loaderAnimation() {
 		})
 		.to("#loader", {
 			height: 0,
-			duration: 1,
+			duration: 1.5,
 			ease: Circ.easeInOut,
 		})
 		.to("#green", {
 			height: "100%",
 			top: 0,
 			duration: 1,
-			delay: -0.8,
+			delay: -1,
 			ease: Circ.easeInOut,
 		})
 		.to("#green", {
@@ -72,7 +72,7 @@ function animateSvg() {
 	gsap.to("#Visual>g>g>path,#Visual>g>g>polyline", {
 		strokeDashoffset: 0,
 		duration: 2,
-		delay: 0,
+		delay: -1,
 		ease: Expo.easeInOut,
 	});
 }
@@ -83,18 +83,20 @@ function animateHomepage() {
 		y: 0,
 		opacity: 1,
 		stagger: 0.05,
+		delay: -1,
 		ease: Expo.easeInOut,
 	})
 		.to("#home .parent .child", {
 			y: 0,
 			duration: 1.5,
 			stagger: 0.1,
+			delay: -0.5,
 			ease: Expo.easeInOut,
 		})
 		.to("#home .row img", {
 			opacity: 1,
 			ease: Expo.easeInOut,
-			delay: -0.5,
+			delay: -0,
 			onComplete: function () {
 				animateSvg();
 			},
@@ -244,9 +246,9 @@ t1.to(
 			scroller: "body",
 			scrub: 2,
 			// markers: true,
-			start: "top 38%",
+			start: "top 30%",
 			// pin: true,
-			end: "top 17%",
+			end: "top 10%",
 		},
 	},
 	"h1"
@@ -310,7 +312,7 @@ gsap.from("#projects .projrow", {
 	opacity: 0,
 	ease: Expo.easeInOut.power2,
 	scrollTrigger: {
-		scrub: 1,
+		// scrub: 1,
 		scroller: "body",
 		trigger: "#projects .projrow",
 		// markers: true,
