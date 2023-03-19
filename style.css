@@ -1,7 +1,12 @@
 /** @format */
+
 @font-face {
 	font-family: lorula;
 	src: url(LaBelleAurore-Regular.ttf);
+}
+@font-face {
+	font-family: mazius;
+	src: url(Mazius-Extraitalic.121a71a7.otf);
 }
 
 * {
@@ -37,26 +42,30 @@ body::-webkit-scrollbar-thumb {
 	overflow-y: hidden;
 	position: relative;
 	/* cursor: none; */
-	caret-color: red;
+	caret-color: yellow;
 }
 /* cursor change part */
 #main #circursor1 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(1);
 	width: 1.2vw;
 	height: 1.2vw;
 	border-radius: 50%;
 	background-color: #08fdd8;
 	z-index: 9999;
-	transition: all linear 0.01s;
+	transition: all linear 0.01s, mix-blend-mode cubic-bezier(0.19, 1, 0.22, 1) 1s;
+	pointer-events: none;
+	/* transform: scale(2); */
+	mix-blend-mode: normal;
 }
 #main #circursor2 {
 	position: absolute;
-	top: 50.5%;
+	pointer-events: none;
+	top: 50%;
 	left: 50%;
-	/* transform:translate(-50%,-50%); */
+	transform: translate(-50%, -50%);
 	background-color: #b3eeda;
 	width: 1vw;
 	height: 1vw;
@@ -67,7 +76,7 @@ body::-webkit-scrollbar-thumb {
 
 /* loader */
 #loader {
-	/* display: none; */
+	display: none;
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -78,8 +87,15 @@ body::-webkit-scrollbar-thumb {
 }
 #loader #g {
 	color: #14cf93;
-	font-family: Mazius-Extraitalic;
+	font-family: mazius;
 	font-style: italic;
+}
+#main #home #g {
+	color: #14cf93;
+	font-family: mazius;
+	font-style: italic;
+	letter-spacing: 1px;
+	/* font-size: inherit; */
 }
 #loader #topheading {
 	position: absolute;
@@ -124,7 +140,7 @@ body::-webkit-scrollbar-thumb {
 	background: #14cf93;
 }
 #green {
-	/* display: none; */
+	display: none;
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -198,6 +214,7 @@ body::-webkit-scrollbar-thumb {
 .row h1 {
 	font-size: 12vw;
 	font-weight: 500;
+	/* mix-blend-mode: difference; */
 }
 .row .text {
 	margin-top: 0vw;
@@ -580,6 +597,9 @@ polyline {
 	font-weight: 700;
 	color: #000;
 }
+#workdetails .info .caps p span {
+	font-size: 1.9vw;
+}
 /* worksummary */
 #worksummary {
 	width: 100%;
@@ -650,6 +670,10 @@ polyline {
 	overflow-x: scroll;
 	padding: 7vw 0;
 	white-space: nowrap;
+	perspective: 500px;
+}
+#slide1 h1 {
+	transform: rotateX(-30deg);
 }
 #slide1::-webkit-scrollbar {
 	display: none;
@@ -662,9 +686,10 @@ polyline {
 	padding: 7vw 0;
 	overflow-x: scroll;
 	white-space: nowrap;
+	perspective: 400px;
 }
 #slide2 h1 {
-	transform: translate(-200%);
+	transform: translate(-200%) rotateX(30deg);
 }
 #marque #slide1 .d1,
 #marque #slide2 .f1 {
@@ -809,7 +834,8 @@ polyline {
 	justify-content: center;
 	height: fit-content;
 	letter-spacing: 0.4vw;
-	font-family: lorula;
+	font-family: Gilroy;
+	/* color: #14; */
 	margin-bottom: 0;
 }
 #form p {
@@ -940,6 +966,7 @@ polyline {
 	text-align: center;
 	line-height: 1.3;
 	color: #fcfcfc;
+	perspective: 200px;
 }
 #footer #footxt h1 {
 	font-size: 5vw;

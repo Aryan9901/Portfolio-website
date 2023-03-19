@@ -276,8 +276,9 @@ t1.to(
 var slide1 = document.querySelectorAll("#marque #slide1 h1");
 slide1.forEach(function (elem) {
 	gsap.to(elem, {
-		transform: "translateX(-100%)",
+		transform: "translateX(-100%) rotateX(5deg)",
 		duration: 4,
+		delay: -1.9,
 		scrollTrigger: {
 			trigger: "#marque #slide1 h1",
 			scroller: "body",
@@ -292,7 +293,7 @@ slide1.forEach(function (elem) {
 var slide2 = document.querySelectorAll("#marque #slide2 h1");
 slide2.forEach(function (elem) {
 	gsap.to(elem, {
-		transform: "translateX(0)",
+		transform: "translateX(0) rotateX(5deg)",
 		duration: 4,
 		scrollTrigger: {
 			trigger: "#marque #slide2 h1",
@@ -328,9 +329,9 @@ var tl = gsap.timeline({
 		scroller: "body",
 		trigger: "#footer #circle",
 		// markers: true,
-		start: "top 50%",
+		start: "top 180%",
 		scrub: 2,
-		end: "top 10%",
+		end: "top 110%",
 		// pin: true,
 	},
 });
@@ -351,7 +352,7 @@ tl.to("#footer #circle", {
 		"#footxt h1,#footxt h2,#footxt h3",
 		{
 			rotateX: "0deg",
-			delay: -0.3,
+			delay: -0.6,
 			ease: Expo.easeInOut.power2,
 		},
 		"hello"
@@ -384,3 +385,20 @@ gsap.from("#imgrig .imgcntnr", {
 		end: "top -10%",
 	},
 });
+
+function cursoranima() {
+	document.querySelector("#home").addEventListener("mouseover", function (dets) {
+		// console.log(dets.target.tagName == "SPAN");
+		if (dets.target.tagName == "SPAN") {
+			document.querySelector("#circursor1").style.transform = `translate(-50%, -50%) scale(5)`;
+			document.querySelector("#circursor1").style.mixBlendMode = `difference`;
+		}
+	});
+	document.querySelectorAll("SPAN").forEach(function (elem) {
+		elem.addEventListener("mouseleave", function (dets) {
+			document.querySelector("#circursor1").style.transform = `translate(-50%, -50%) scale(1)`;
+			document.querySelector("#circursor1").style.mixBlendMode = `normal`;
+		});
+	});
+}
+cursoranima();
