@@ -22,26 +22,26 @@ html {
 	width: 100%;
 	/* scrollbar-color: red yellow; */
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
 	width: 1em;
 }
 body::-webkit-scrollbar-track {
 	/* display: none; */
-	background: #fef3f8;
-}
-body::-webkit-scrollbar-thumb {
+/* background: #fef3f8; */
+/* }  */
+/* body::-webkit-scrollbar-thumb {
 	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 	background-color: #08fdd8;
 	height: 4.5vw;
 	/* width: 1vw; */
-	border-radius: 2vw;
-	outline: 1px solid slategrey;
-}
+/* border-radius: 2vw; */
+/* outline: 1px solid slategrey; */
+/* }  */
 #main {
 	overflow: hidden;
 	overflow-y: hidden;
 	position: relative;
-	/* cursor: none; */
+	cursor: none;
 	caret-color: yellow;
 }
 /* cursor change part */
@@ -76,7 +76,7 @@ body::-webkit-scrollbar-thumb {
 
 /* loader */
 #loader {
-	display: none;
+	/* display: none; */
 	/* position: absolute; */
 	position: fixed;
 	width: 100%;
@@ -95,6 +95,7 @@ body::-webkit-scrollbar-thumb {
 	font-family: mazius;
 	font-style: italic;
 	letter-spacing: 1px;
+	margin: 0 6px;
 	/* font-size: inherit; */
 }
 #loader #topheading {
@@ -140,7 +141,7 @@ body::-webkit-scrollbar-thumb {
 	background: #14cf93;
 }
 #green {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	top: 100%;
 	z-index: 999;
@@ -360,7 +361,7 @@ polyline {
 	font-weight: 400;
 	margin-bottom: 8vw;
 }
-#help #lineu {
+#home #lineu {
 	height: 0.1vw;
 	width: 95%;
 	background-color: #adadad;
@@ -731,7 +732,6 @@ polyline {
 	min-height: 50vh;
 	width: 97%;
 	margin: 1vw 1vw;
-	/* background-color: #f3f3f3; */
 	background-color: transparent;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	display: flex;
@@ -782,16 +782,17 @@ polyline {
 }
 
 .projrow .proj h1 {
-	width: 40%;
+	width: 50%;
+	align-self: flex-start;
 	white-space: nowrap;
-	font-size: 1.3vw;
+	font-size: 1.9vw;
 	color: red;
 	font-family: Gilroy;
 	margin-left: 1vw;
 }
 .projrow .proj h2 {
 	width: 100%;
-	font-size: 2.5vw;
+	font-size: 2.6vw;
 	color: rgb(121 69 93);
 	transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 	margin-left: 1vw;
@@ -799,8 +800,9 @@ polyline {
 .projrow .proj h2:hover {
 	color: #08fdd8;
 }
+
 .projrow .proj p {
-	width: 80%;
+	width: 87%;
 	columns: #6a5964;
 	font-size: 1.2vw;
 	margin-left: 1vw;
@@ -808,9 +810,8 @@ polyline {
 
 /* contact div */
 #contactdet {
-	min-height: 180vh;
+	min-height: 164vh;
 	width: 100%;
-	/* background-color: red; */
 	display: flex;
 	margin-top: 8vw;
 	cursor: pointer;
@@ -819,37 +820,36 @@ polyline {
 /* contact form */
 #contactdet #form {
 	width: 100%;
-	height: 180vh;
+	/* height: 180vh; */
+	height: 100%;
 	/* background-color: blue; */
 	position: relative;
 	/* padding: 0 1vw; */
 }
 #form h1 {
-	font-size: 13rem;
-	margin-top: 2vw;
-	line-height: 1.4;
-	/* background-color: red; */
+	/* font-size: 13rem; */
+	font-size: 21vw;
+	margin-top: 0vw;
+	line-height: 1;
 	display: flex;
 	text-align: center;
 	justify-content: center;
 	height: fit-content;
-	letter-spacing: 0.4vw;
+	letter-spacing: 0.5vw;
 	font-family: Gilroy;
-	/* color: #14; */
 	margin-bottom: 0;
 }
 #form p {
-	font-size: 1.3rem;
-	position: absolute;
-	top: 33%;
-	left: 43%;
-	transform: translate(-50%, -50%);
-	width: 70%;
+	font-size: 2vw;
+	margin: 1vw auto;
+	margin-left: 80px;
+	width: 64%;
 	text-align: start;
+	margin-top: 0vw;
 	font-family: Gilroy;
 }
 #form input {
-	margin-top: 9vw;
+	margin-top: 1vw;
 	background-color: #b4b4b4;
 	border: 0.13vw solid #08fdd8;
 	padding: 2vw 2.3vw;
@@ -864,14 +864,14 @@ polyline {
 	transform: skew(-2deg);
 }
 #form #name {
-	margin-top: 11vw;
+	margin-top: 3vw;
 	width: 48%;
 	margin-right: 0.4vw;
 	font-size: 1.5rem;
 	margin-left: 1vw;
 }
 #form #email {
-	margin-top: 11vw;
+	margin-top: 3vw;
 	width: 48%;
 	font-size: 1.5rem;
 }
@@ -910,7 +910,7 @@ polyline {
 	display: block;
 	color: #000;
 	background-color: transparent;
-	margin: 1vw 1vw 1vw auto;
+	margin: 1vw 1vw 0vw auto;
 	position: relative;
 	font-size: 2rem;
 }
@@ -920,19 +920,19 @@ polyline {
 }
 /* footer */
 #footer {
-	height: 100vh;
+	/* height: 100vh; */
+	min-height: 100vh;
 	overflow: hidden;
 	width: 100%;
-	background-color: #253b39;
+	/* background-color: #253b39; */
+	background: linear-gradient(to right, #253b39, #575b5b, #253b39);
 	/* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5700, 0, 1); */
 	position: relative;
 	/* bottom: 0; */
-	/* background-color: red; */
 }
 #footer #circle {
 	height: 50vw;
 	width: 45vw;
-	/* background-color: red; */
 	border-radius: 50%;
 	position: absolute;
 	top: 20%;
@@ -965,7 +965,7 @@ polyline {
 	font-weight: 900;
 	text-align: center;
 	line-height: 1.3;
-	color: #fcfcfc;
+	color: #f0f9f8;
 	perspective: 200px;
 }
 #footer #footxt h1 {
@@ -973,18 +973,21 @@ polyline {
 	font-weight: 900;
 	transform-origin: 50% 50%;
 	transform: rotateX(-90deg);
+	opacity: 0;
 }
 #footer #footxt h2 {
 	font-size: 5.2vw;
 	font-weight: 900;
 	transform-origin: 50% 50%;
 	transform: rotateX(-90deg);
+	opacity: 0;
 }
 #footer #footxt h3 {
 	font-size: 5.5vw;
 	font-weight: 900;
 	transform-origin: 50% 50%;
 	transform: rotateX(-90deg);
+	opacity: 0;
 }
 #socials {
 	width: 100%;
@@ -1074,12 +1077,52 @@ polyline {
 		height: 100%;
 	}
 }
-
+/* gallery text */
+#gallery {
+	font-size: 12vw;
+	margin: 3vw 4vw;
+	margin-top: 5vw;
+	margin-right: 4vw;
+	margin-left: 10vw;
+	font-family: Gilroy;
+	color: #000;
+	display: inline-block;
+}
+#galhelp {
+	/* margin: 0 1vw 0 auto; */
+	margin: 0px 3vw 0px 15%;
+	display: inline-block;
+}
 /* meadia query */
-
+@media (max-width: 1325px) {
+	#contactdet {
+		min-height: 150vh;
+	}
+}
+@media (max-width: 1186px) {
+	#contactdet {
+		min-height: 141vh;
+	}
+}
+@media (max-width: 1083px) {
+	#contactdet {
+		min-height: 134vh;
+	}
+}
+@media (max-width: 900px) {
+	#home #contactdet {
+		min-height: 121vh;
+	}
+}
 /* for width 989px */
 @media (max-width: 989px) {
+	/* image divs */
+	#main #home #imgdivs {
+		min-height: 75vh;
+		margin-bottom: 0vw;
+	}
 	/* workdetails */
+
 	#workdetails {
 		min-height: 100vh;
 	}
@@ -1116,6 +1159,41 @@ polyline {
 		/* height: 110%; */
 		min-height: 105%;
 	}
+	#home #contactdet {
+		min-height: 121vh;
+	}
+	/* socials */
+	#footer {
+		min-height: 100vh;
+	}
+	#socials {
+		padding: 1vw 3vw;
+		flex-wrap: wrap;
+		bottom: 2%;
+	}
+	#socials .socialcard {
+		width: 45%;
+	}
+	#socials .socialcard .name h1 {
+		font-size: 3.6vw;
+	}
+	#socials .socialcard .name p {
+		font-size: 1.7vw;
+	}
+	#socials .socialcard .iconcnt {
+		height: 5vw;
+		width: 5vw;
+	}
+	#socials .socialcard .iconcnt i {
+		font-size: 2.5vw;
+	}
+	#socials .socialcard:hover {
+		animation-duration: 1.3s;
+	}
+	#socials .socialcard:hover .sover {
+		animation-name: bgfull;
+		animation-duration: 1.3s;
+	}
 }
 
 /* max width 800px */
@@ -1130,35 +1208,95 @@ polyline {
 	}
 	/* projects div */
 	#projects .projrow .proj {
-		row-gap: 2.3vw;
+		row-gap: 5vw;
 	}
 	#projects .projrow .proj h1 {
-		font-size: 2.6vw;
+		font-size: 2.7vw;
 	}
 	#projects .projrow .proj h2 {
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 	#projects .projrow .proj p {
+		font-size: 2.6vw;
+	}
+	/* socials */
+	#footer {
+		min-height: 95vh;
+	}
+	#socials .socialcard {
+		width: 46%;
+	}
+	#socials .socialcard .name h1 {
+		font-size: 4vw;
+	}
+	#socials .socialcard .name p {
 		font-size: 2vw;
+	}
+	#socials .socialcard .iconcnt {
+		height: 7vw;
+		width: 7vw;
+	}
+	#socials .socialcard .iconcnt i {
+		font-size: 3vw;
+	}
+}
+@media (max-width: 783px) {
+	#home #contactdet {
+		min-height: 114vh;
+	}
+}
+@media (max-width: 734px) {
+	#home #contactdet {
+		min-height: 116vh;
+	}
+	#projects .projrow .proj {
+		row-gap: 5vw;
+	}
+	#projects .projrow .proj h1 {
+		font-size: 2.9vw;
+	}
+	#projects .projrow .proj h2 {
+		font-size: 5.5vw;
+	}
+	#projects .projrow .proj p {
+		font-size: 2.9vw;
+	}
+	/* socials */
+	#footer {
+		min-height: 130vh;
+	}
+	#socials .socialcard {
+		width: 96%;
+	}
+	#socials .socialcard .name h1 {
+		font-size: 5vw;
+		margin-left: 4vw;
+	}
+	#socials .socialcard .name p {
+		font-size: 2.5vw;
+		margin-left: 4vw;
+	}
+	#socials .socialcard .iconcnt {
+		height: 8vw;
+		width: 8vw;
+		margin-right: 4vw;
+	}
+	#socials .socialcard .iconcnt i {
+		font-size: 4vw;
+	}
+	#socials .socialcard:hover {
+		animation: none;
 	}
 }
 /* max width 729px for contacts div */
 @media (max-width: 729px) {
-	#contactdet {
-		min-height: 160vh;
-		margin-top: 10vw;
-	}
 	/* contact form */
-	#contactdet #form {
-		height: 160vh;
-	}
 	#form h1 {
 		font-size: 27vw;
 		margin-bottom: 8vw;
 	}
 	#form p {
 		font-size: 3vw;
-		top: 33%;
 		width: 75%;
 	}
 	#form input {
@@ -1168,6 +1306,12 @@ polyline {
 	}
 	#form #message::placeholder {
 		font-size: 5vw;
+	}
+	#form #number {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 2.2vw;
 	}
 	/* workpreview div */
 	#worksummary {
@@ -1204,6 +1348,12 @@ polyline {
 		width: 50vw;
 		top: -10%;
 	}
+	#home #footer #circle {
+		height: 55vw;
+		width: 50vw;
+		top: 40%;
+		display: none;
+	}
 	/* fprm ke andar message */
 	#form #message {
 		margin-top: 1.3vw;
@@ -1218,6 +1368,20 @@ polyline {
 		overflow-wrap: break-word;
 	}
 }
+@media (max-width: 616px) {
+	#projects .projrow .proj {
+		row-gap: 5.2vw;
+	}
+	#projects .projrow .proj h1 {
+		font-size: 3.2vw;
+	}
+	#projects .projrow .proj h2 {
+		font-size: 5.9vw;
+	}
+	#projects .projrow .proj p {
+		font-size: 3vw;
+	}
+}
 /* max width 600px */
 @media (max-width: 600px) {
 	#projects .column {
@@ -1226,41 +1390,28 @@ polyline {
 	}
 	/* projects div */
 	#projects .projrow .proj {
-		row-gap: 3vw;
+		row-gap: 5.7vw;
 	}
 	#projects .projrow .proj h1 {
-		font-size: 3.6vw;
+		font-size: 4vw;
 	}
 	#projects .projrow .proj h2 {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 	#projects .projrow .proj p {
-		font-size: 2.4vw;
+		font-size: 4.8vw;
 	}
 	/* contact form */
 
 	#contactdet #form p {
 		font-size: 3vw;
-		top: 23%;
 	}
 	/* footer */
 	#footer {
-		height: 50vh;
+		min-height: 120vh;
 	}
-	#socials .socialcard {
-		height: 10vh;
-		width: 20%;
-		padding: 0 0vw;
-	}
-	#socials .socialcard .name h1 {
-		font-size: 2.6vw;
-	}
-	#socials .socialcard .name p {
-		font-size: 1.7vw;
-	}
-	#socials .socialcard .iconcnt i {
-		font-size: 3.3vw;
-		font-weight: 900;
+	#footer #footxt h1 {
+		font-size: 12vw;
 	}
 	/* work details divs */
 	#workdetails {
@@ -1300,53 +1451,74 @@ polyline {
 		font-size: 3vw;
 	}
 }
-
+@media (max-width: 592px) {
+	#home #contactdet {
+		min-height: 110vh;
+	}
+}
+@media (max-width: 519px) {
+	#footer #footxt h1 {
+		font-size: 10vw;
+	}
+}
 @media (max-width: 510px) {
 	/* contact form */
 	#contactdet #form p {
 		font-size: 3vw;
 		top: 22%;
+		margin: 0 auto;
+	}
+	#home #contactdet {
+		min-height: 107vh;
 	}
 	/* footer */
-	#footer {
-		height: 40vh;
+
+	#projects .projrow .proj {
+		row-gap: 5.8vw;
+		padding-left: 5vw;
 	}
-	#footer #circle {
-		height: 55vw;
-		width: 50vw;
-		top: -47%;
+	#projects .projrow .proj h1 {
+		font-size: 4.4vw;
 	}
-	#socials .socialcard {
-		height: 10vh;
-		width: 20%;
-		padding: 0 0vw;
+	#projects .projrow .proj h2 {
+		font-size: 9vw;
 	}
-	#socials .socialcard .name h1 {
-		font-size: 2.6vw;
-	}
-	#socials .socialcard .name p {
-		font-size: 1.7vw;
-	}
-	#socials .socialcard .iconcnt i {
-		font-size: 3.3vw;
-		font-weight: 900;
+	#projects .projrow .proj p {
+		font-size: 5vw;
 	}
 }
-
+@media (max-width: 462px) {
+	#projects .projrow .proj {
+		row-gap: 5.9vw;
+	}
+	#projects .projrow .proj h1 {
+		font-size: 4.7vw;
+	}
+	#projects .projrow .proj h2 {
+		font-size: 10vw;
+	}
+	#projects .projrow .proj p {
+		font-size: 6vw;
+	}
+}
 /* max-width less than 450 px */
 @media (max-width: 450px) {
 	/* projects div */
 	#projects .projrow .proj {
-		row-gap: 3.6vw;
+		row-gap: 5.9vw;
+		padding-right: 1vw;
+		padding: 2vw 4vw;
+		padding-left: 7vw;
+		margin: 3vw 4vw;
 	}
 	#projects .projrow .proj h1 {
-		font-size: 4.3vw;
+		font-size: 4.9vw;
 	}
 	#projects .projrow .proj h2 {
-		font-size: 7.4vw;
+		font-size: 10vw;
 	}
 	#projects .projrow .proj p {
-		font-size: 3.2vw;
+		font-size: 6vw;
 	}
 	/* contact form */
 	#contactdet #form p {
@@ -1443,5 +1615,10 @@ polyline {
 	#contactdet #form p {
 		font-size: 3vw;
 		top: 9%;
+	}
+}
+@media (max-width: 757px) {
+	#form h1 {
+		font-size: 17vw;
 	}
 }

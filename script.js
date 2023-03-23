@@ -1,5 +1,9 @@
 /** @format */
 
+window.addEventListener("load", (event) => {
+	window.scrollTo(0, 0);
+});
+
 function valueSetters() {
 	gsap.set("#nav a", { y: "100%", opacity: 0 });
 	gsap.set("#home .parent .child", { y: "100%" });
@@ -76,7 +80,6 @@ function animateSvg() {
 		ease: Expo.easeInOut,
 	});
 }
-
 function animateHomepage() {
 	let tl = gsap.timeline();
 	tl.to("#nav a", {
@@ -202,24 +205,6 @@ function cardHoverEffect() {
 		});
 	});
 }
-// function cardHoverEffect() {
-// 	document.querySelectorAll("#imgcnt .containers").forEach(function (cnt) {
-// 		var show;
-// 		cnt.addEventListener("mousemove", function (dets) {
-// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
-// 			show = dets.target;
-// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.pageX - 50}px`;
-// 			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY - 2200}px`;
-// 			show.style.filter = "grayscale(1)";
-// 			document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
-// 		});
-// 		cnt.addEventListener("mouseleave", function (dets) {
-// 			document.querySelector("#cursor").children[show.dataset.index].style.opacity = 0;
-// 			show.style.filter = "grayscale(0)";
-// 			document.querySelector("#work").style.backgroundColor = "#f2f2f2";
-// 		});
-// 	});
-// }
 
 revealToSpan();
 valueSetters();
@@ -352,6 +337,7 @@ tl.to("#footer #circle", {
 		"#footxt h1,#footxt h2,#footxt h3",
 		{
 			rotateX: "0deg",
+			opacity: 1,
 			delay: -0.6,
 			ease: Expo.easeInOut.power2,
 		},
@@ -372,8 +358,8 @@ function cursorchange() {
 cursorchange();
 
 // three card rotate
-gsap.from("#imgrig .imgcntnr", {
-	rotate: "0deg",
+gsap.from("#imgrig", {
+	rotate: "-10deg",
 	// opacity: 0,
 	ease: Expo.easeInOut.power2,
 	scrollTrigger: {
@@ -385,6 +371,19 @@ gsap.from("#imgrig .imgcntnr", {
 		end: "top -10%",
 	},
 });
+// gsap.from("#imgrig .imgcntnr", {
+// 	rotate: "0deg",
+// 	// opacity: 0,
+// 	ease: Expo.easeInOut.power2,
+// 	scrollTrigger: {
+// 		// markers: true,
+// 		scroller: "body",
+// 		trigger: "#imgrig .imgcntnr",
+// 		start: "top 40%",
+// 		scrub: 2,
+// 		end: "top -10%",
+// 	},
+// });
 
 function cursoranima() {
 	document.querySelector("#home").addEventListener("mouseover", function (dets) {
