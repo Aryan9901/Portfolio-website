@@ -314,9 +314,9 @@ var tl = gsap.timeline({
 		scroller: "body",
 		trigger: "#footer #circle",
 		// markers: true,
-		start: "top 180%",
+		start: "top 135%",
 		scrub: 2,
-		end: "top 110%",
+		end: "top 117%",
 		// pin: true,
 	},
 });
