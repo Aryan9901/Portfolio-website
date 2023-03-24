@@ -389,8 +389,8 @@ function cursoranima() {
 	document.querySelector("#home").addEventListener("mouseover", function (dets) {
 		// console.log(dets.target.tagName == "SPAN");
 		if (dets.target.tagName == "SPAN") {
-			document.querySelector("#circursor1").style.transform = `translate(-50%, -50%) scale(5)`;
-			document.querySelector("#circursor1").style.mixBlendMode = `difference`;
+			document.querySelector("#circursor1").style.transform = `translate(-50%, -50%) scale(7)`;
+			document.querySelector("#circursor1").style.mixBlendMode = `darken`;
 		}
 	});
 	document.querySelectorAll("SPAN").forEach(function (elem) {

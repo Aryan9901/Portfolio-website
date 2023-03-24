@@ -318,6 +318,7 @@ polyline {
 	width: 100%;
 	min-height: 100vh;
 	background-color: #f2f2f2;
+	/* background-color: #ff99a8; */
 	position: relative;
 	padding-top: 15vw;
 	transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
@@ -1361,7 +1362,7 @@ polyline {
 }
 /* max width 729px for contacts div */
 @media (max-width: 729px) {
-	/* worksummary */
+	/* worksummary
 	#preview .sumprev {
 		width: 49vw;
 		min-height: 93vh;
@@ -1372,7 +1373,7 @@ polyline {
 	#worksummary #marque {
 		top: 72%;
 		min-height: 150vh;
-	}
+	} */
 	/* contact form */
 	#form h1 {
 		font-size: 27vw;
@@ -1398,7 +1399,7 @@ polyline {
 	}
 	/* workpreview div */
 	#worksummary {
-		min-height: 520vh;
+		min-height: 660vh;
 	}
 	#worksummary #preview {
 		min-height: 120vh;
@@ -1409,16 +1410,18 @@ polyline {
 	#preview .sumprev {
 		width: 98%;
 		border-radius: 3vw;
-		max-height: 35vh;
+		/* min-height: 100vh; */
+		/* max-height: 100vh; */
+		height: auto;
 	}
 	#preview .sumprev img {
-		width: 130%;
+		width: 100%;
 		height: auto;
 	}
 	/* marque effect */
-	#marque {
-		min-height: 270vh;
-		top: 66%;
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 73%;
 	}
 	/* footer */
 	#footer {
@@ -1433,6 +1436,28 @@ polyline {
 	#workdetails .info .caps {
 		height: 14vh;
 		padding: 1.6vw 2.8vw;
+	}
+}
+@media (max-width: 715px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 620vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 73%;
+	}
+}
+@media (max-width: 667px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 610vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 73%;
 	}
 }
 @media (max-width: 640px) {
@@ -1460,6 +1485,15 @@ polyline {
 		padding: 0vw 0.7vw;
 		overflow-wrap: break-word;
 	}
+	/* workpreview div */
+	#worksummary {
+		min-height: 600vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 71%;
+	}
 }
 @media (max-width: 616px) {
 	#projects .projrow .proj {
@@ -1473,6 +1507,15 @@ polyline {
 	}
 	#projects .projrow .proj p {
 		font-size: 3vw;
+	}
+	/* workpreview div */
+	#worksummary {
+		min-height: 580vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 71%;
 	}
 }
 /* max width 600px */
@@ -1548,7 +1591,7 @@ polyline {
 	#home #contactdet {
 		min-height: 110vh;
 	}
-	/* worksummary */
+	/* worksummary
 	#preview .sumprev {
 		min-height: 80vh;
 	}
@@ -1558,6 +1601,26 @@ polyline {
 	#worksummary #marque {
 		top: 70%;
 		min-height: 150vh;
+	} */
+	/* workpreview div */
+	#worksummary {
+		min-height: 540vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 150vh;
+		top: 71%;
+	}
+}
+@media (max-width: 565px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 530vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
 	}
 }
 @media (max-width: 530px) {
@@ -1571,7 +1634,28 @@ polyline {
 		height: 10vh;
 		padding: 2vw 3vw;
 	}
+	/* workpreview div */
+	#worksummary {
+		min-height: 520vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
+	}
 }
+@media (max-width: 511px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 530vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
+	}
+}
+
 @media (max-width: 519px) {
 	#footer #footxt h1 {
 		font-size: 10vw;
