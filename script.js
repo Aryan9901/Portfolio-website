@@ -1,5 +1,4 @@
 /** @format */
-
 window.addEventListener("load", (event) => {
 	window.scrollTo(0, 0);
 });
@@ -110,6 +109,8 @@ function locoinitialise() {
 	const locoScroll = new LocomotiveScroll({
 		el: document.querySelector("#main"),
 		smooth: true,
+		multiplier: 0.8,
+		lerp: 0.1,
 
 		// for tablet smooth
 		tablet: { smooth: true },
@@ -136,6 +137,7 @@ function locoinitialise() {
 
 		pinType: document.querySelector("#main").style.transform ? "transform" : "fixed",
 	});
+	console.log(locoScroll);
 
 	// --- RED PANEL ---
 	gsap.from(".line-1", {
@@ -194,7 +196,7 @@ function cardHoverEffect() {
 			document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
 			show = dets.target;
 			document.querySelector("#cursor").children[dets.target.dataset.index].style.left = `${dets.pageX}px`;
-			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY}px`;
+			document.querySelector("#cursor").children[dets.target.dataset.index].style.top = `${dets.pageY + 2100}px`;
 			show.style.filter = "grayscale(1)";
 			document.querySelector("#work").style.backgroundColor = "#" + dets.target.dataset.color;
 		});
@@ -209,7 +211,7 @@ function cardHoverEffect() {
 revealToSpan();
 valueSetters();
 loaderAnimation();
-// locoinitialise();
+locoinitialise();
 cardHoverEffect();
 
 // ye pehle se comment the inko comment out mat karna
@@ -228,7 +230,7 @@ t1.to(
 		duration: 19,
 		scrollTrigger: {
 			trigger: "#worksummary h1",
-			scroller: "body",
+			scroller: "#main",
 			scrub: 2,
 			// markers: true,
 			start: "top 30%",
@@ -246,7 +248,7 @@ t1.to(
 		duration: 2,
 		scrollTrigger: {
 			trigger: "#worksummary #preview .sumprev",
-			scroller: "body",
+			scroller: "#main",
 			scrub: 2,
 			// markers: true,
 			start: "top 20%",
@@ -266,7 +268,7 @@ slide1.forEach(function (elem) {
 		delay: -1.9,
 		scrollTrigger: {
 			trigger: "#marque #slide1 h1",
-			scroller: "body",
+			scroller: "#main",
 			start: "top 45%",
 			end: "top -90%",
 			// markers: true,
@@ -282,7 +284,7 @@ slide2.forEach(function (elem) {
 		duration: 4,
 		scrollTrigger: {
 			trigger: "#marque #slide2 h1",
-			scroller: "body",
+			scroller: "#main",
 			start: "top 65%",
 			end: "top -10%",
 			// markers: true,
@@ -292,26 +294,26 @@ slide2.forEach(function (elem) {
 });
 
 // projects rows animation
-gsap.from("#projects .projrow", {
-	gap: "8vw",
-	rotate: "-10deg",
-	opacity: 0,
-	ease: Expo.easeInOut.power2,
-	scrollTrigger: {
-		// scrub: 1,
-		scroller: "body",
-		trigger: "#projects .projrow",
-		// markers: true,
-		start: "top 60%",
-		end: "top -20%",
-	},
-});
+// gsap.from("#projects .projrow", {
+// 	gap: "8vw",
+// 	rotate: "-10deg",
+// 	opacity: 0,
+// 	ease: Expo.easeInOut.power2,
+// 	scrollTrigger: {
+// 		// scrub: 1,
+// 		scroller: "body",
+// 		trigger: "#projects .projrow",
+// 		// markers: true,
+// 		start: "top 60%",
+// 		end: "top -20%",
+// 	},
+// });
 
 // footer
 
 var tl = gsap.timeline({
 	scrollTrigger: {
-		scroller: "body",
+		scroller: "#main",
 		trigger: "#footer #circle",
 		// markers: true,
 		start: "top 135%",
@@ -338,19 +340,29 @@ tl.to("#footer #circle", {
 		{
 			rotateX: "0deg",
 			opacity: 1,
-			delay: -0.6,
+			delay: -0.5,
 			ease: Expo.easeInOut.power2,
 		},
 		"hello"
 	);
-
 // cursor change
 function cursorchange() {
+	// locoScroll.on("scroll", (instance) => {
+	// 	let customCursor1 = document.querySelector("#circursor1");
+	// 	let customCursor2 = document.querySelector("#circursor2");
+	// 	let scrollxPx = instance.scroll.x + "px";
+	// 	let scrollyPx = instance.scroll.y + "px";
+	// 	customCursor1.style.left = scrollxPx;
+	// 	customCursor1.style.top = scrollyPx;
+	// 	customCursor2.style.left = scrollxPx;
+	// 	customCursor2.style.top = scrollyPx;
+	// });
+
 	var cur1 = document.querySelector("#circursor1");
 	var cur2 = document.querySelector("#circursor2");
 	document.querySelector("#main").addEventListener("mousemove", function (dets) {
-		cur1.style.top = dets.pageY + "px";
-		cur2.style.top = dets.pageY + "px";
+		cur1.style.top = dets.y + "px";
+		cur2.style.top = dets.Y + "px";
 		cur1.style.left = dets.pageX + "px";
 		cur2.style.left = dets.pageX + "px";
 	});
@@ -364,10 +376,10 @@ gsap.from("#imgrig", {
 	ease: Expo.easeInOut.power2,
 	scrollTrigger: {
 		// markers: true,
-		scroller: "body",
+		scroller: "#main",
 		trigger: "#imgrig .imgcntnr",
 		start: "top 40%",
-		scrub: 2,
+		scrub: 3,
 		end: "top -10%",
 	},
 });

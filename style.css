@@ -34,7 +34,7 @@ html {
 	overflow: hidden;
 	overflow-y: hidden;
 	position: relative;
-	cursor: none;
+	/* cursor: none; */
 	caret-color: yellow;
 }
 /* cursor change part */
@@ -149,6 +149,7 @@ html {
 	/* height: 230vh; */
 	min-height: 170vh;
 	background-color: #fcfaf8;
+	position: relative;
 }
 /* navbar inside home screen */
 #home #nav {
