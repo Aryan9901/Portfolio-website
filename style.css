@@ -1624,6 +1624,17 @@ polyline {
 		top: 69%;
 	}
 }
+@media (max-width: 540px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 510vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
+	}
+}
 @media (max-width: 530px) {
 	#main #home #workdetails .caps .sp {
 		font-size: 5vw;
@@ -1637,7 +1648,7 @@ polyline {
 	}
 	/* workpreview div */
 	#worksummary {
-		min-height: 520vh;
+		min-height: 500vh;
 	}
 	/* marque effect */
 	#worksummary #marque {
@@ -1648,7 +1659,7 @@ polyline {
 @media (max-width: 511px) {
 	/* workpreview div */
 	#worksummary {
-		min-height: 530vh;
+		min-height: 480vh;
 	}
 	/* marque effect */
 	#worksummary #marque {
@@ -1688,6 +1699,17 @@ polyline {
 		font-size: 5vw;
 	}
 }
+@media (max-width: 493px) {
+	/* workpreview div */
+	#worksummary {
+		min-height: 470vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
+	}
+}
 @media (max-width: 462px) {
 	#projects .projrow .proj {
 		row-gap: 5.9vw;
@@ -1700,6 +1722,15 @@ polyline {
 	}
 	#projects .projrow .proj p {
 		font-size: 6vw;
+	}
+	/* workpreview div */
+	#worksummary {
+		min-height: 450vh;
+	}
+	/* marque effect */
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 69%;
 	}
 }
 /* max-width less than 450 px */
@@ -1727,37 +1758,25 @@ polyline {
 		top: 20%;
 	}
 	/* worksummary */
+
 	#worksummary {
-		min-height: 410vh;
-	}
-	#worksummary #preview {
-		min-height: 120vh;
-		flex-direction: column;
-		row-gap: 3vw;
-		top: 8%;
-	}
-	#preview .sumprev {
-		width: 98%;
-		border-radius: 3vw;
-		max-height: 35vh;
-	}
-	#preview .sumprev img {
-		width: 130%;
-		height: auto;
+		min-height: 384vh;
 	}
 	/* marque effect */
-	#marque {
-		min-height: 90vh;
-		top: 81%;
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 78%;
 	}
+
 	#marque #slide1 {
 		overflow-y: hidden;
 		overflow-x: scroll;
-		padding: 1vw 0;
+		padding: 1.2vw 0;
 	}
 	#marque #slide2 {
 		overflow-y: hidden;
-		padding: 0.5vw 0;
+		padding: 1vw 0;
 	}
 	#marque #slide1 .d1,
 	#marque #slide2 .f1 {
@@ -1792,6 +1811,72 @@ polyline {
 		padding: 2vw 10vw;
 	}
 }
+@media (max-width: 429px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 370vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 78%;
+	}
+}
+@media (max-width: 414px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 360vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 78%;
+	}
+}
+@media (max-width: 400px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 340vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 78%;
+	}
+}
+@media (max-width: 387px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 330vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 78%;
+	}
+}
+@media (max-width: 377px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 330vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 76%;
+	}
+}
+
 /* max-width less than 370 px */
 @media (max-width: 370px) {
 	/* contact form */
@@ -1802,6 +1887,71 @@ polyline {
 		/* left: 10%; */
 	}
 }
+@media (max-width: 361px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 320vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 76%;
+	}
+}
+@media (max-width: 350px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 309vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 76%;
+	}
+}
+@media (max-width: 341px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 307vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 74%;
+	}
+}
+@media (max-width: 321px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 290vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 74%;
+	}
+}
+@media (max-width: 306px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 280vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 74%;
+	}
+}
 /* max-width less than 300 px */
 @media (max-width: 300px) {
 	/* contact form */
@@ -1809,6 +1959,46 @@ polyline {
 		font-size: 3vw;
 		display: none;
 		top: 12%;
+	}
+	#worksummary {
+		min-height: 264vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 74%;
+	}
+}
+@media (max-width: 272px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 250vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 74%;
+	}
+}
+@media (max-width: 255px) {
+	/* worksummary */
+	#worksummary {
+		min-height: 237vh;
+	}
+	#worksummary #marque {
+		top: 72%;
+	}
+}
+@media (max-width: 236px) {
+	/* worksummary */
+	#worksummary {
+		min-height: 220vh;
+	}
+	#worksummary #marque {
+		top: 71%;
 	}
 }
 @media (max-width: 220px) {
