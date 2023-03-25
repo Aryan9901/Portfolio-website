@@ -776,43 +776,45 @@ polyline {
 	position: relative;
 	padding-top: 1.5vw;
 	padding-bottom: 1.5vw;
+	mix-blend-mode: darken;
 	/* z-index: 1; */
 }
 #projects .gree .proj::before {
 	content: "";
 	position: absolute;
-	height: 1%;
+	height: 2%;
 	width: 100%;
-	top: 0;
+	top: 1%;
 	background-color: rgb(173, 29, 115);
-	z-index: -1;
+	z-index: 1;
 }
 #projects .re .proj::before {
 	content: "";
 	position: absolute;
-	height: 1%;
+	height: 2%;
 	width: 100%;
+	mix-blend-mode: difference;
 	top: 0;
 	background-color: rgb(42, 197, 208);
-	z-index: -1;
+	z-index: 1;
 }
 #projects .ble .proj::before {
 	content: "";
 	position: absolute;
-	height: 1%;
+	height: 2%;
 	width: 100%;
 	top: 0;
 	background-color: rgb(234, 215, 47);
-	z-index: -1;
+	z-index: 1;
 }
 #projects .pin .proj::before {
 	content: "";
 	position: absolute;
-	height: 1%;
+	height: 2%;
 	width: 100%;
 	top: 0;
 	background-color: rgb(31, 205, 153);
-	z-index: -1;
+	z-index: 1;
 }
 
 .projrow .proj h1 {
@@ -1874,6 +1876,32 @@ polyline {
 	#worksummary #marque {
 		min-height: 100vh;
 		top: 76%;
+	}
+}
+@media (max-width: 414px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 210vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 70%;
+	}
+}
+@media (max-width: 376px) {
+	/* worksummary */
+
+	#worksummary {
+		min-height: 260vh;
+	}
+	/* marque effect */
+
+	#worksummary #marque {
+		min-height: 100vh;
+		top: 72%;
 	}
 }
 
