@@ -208,9 +208,9 @@ function cardHoverEffect() {
 	});
 }
 
-revealToSpan();
-valueSetters();
-loaderAnimation();
+// revealToSpan();
+// valueSetters();
+// loaderAnimation();
 locoinitialise();
 cardHoverEffect();
 
@@ -229,13 +229,13 @@ t1.to(
 		// delay: 3,
 		duration: 19,
 		scrollTrigger: {
-			trigger: "#worksummary h1",
+			trigger: "#worksummary  h1",
 			scroller: "#main",
 			scrub: 2,
 			// markers: true,
-			start: "top 30%",
+			start: "top 70%",
 			// pin: true,
-			end: "top 10%",
+			end: "top 0%",
 		},
 	},
 	"h1"
@@ -244,14 +244,14 @@ t1.to(
 	{
 		rotate: "0deg",
 		ease: Expo.easeInOut.power2,
-		delay: 2,
+		delay: 3.4,
 		duration: 2,
 		scrollTrigger: {
 			trigger: "#worksummary #preview .sumprev",
 			scroller: "#main",
 			scrub: 2,
 			// markers: true,
-			start: "top 20%",
+			start: "top 10%",
 			// pin: true,
 			end: "top -10%",
 		},
@@ -259,55 +259,6 @@ t1.to(
 	"h2"
 );
 // marque tool type animation
-
-var slide1 = document.querySelectorAll("#marque #slide1 h1");
-slide1.forEach(function (elem) {
-	gsap.to(elem, {
-		transform: "translateX(-100%) rotateX(5deg)",
-		duration: 4,
-		delay: -1.9,
-		scrollTrigger: {
-			trigger: "#marque #slide1 h1",
-			scroller: "#main",
-			start: "top 45%",
-			end: "top -90%",
-			// markers: true,
-			scrub: 2,
-		},
-	});
-});
-
-var slide2 = document.querySelectorAll("#marque #slide2 h1");
-slide2.forEach(function (elem) {
-	gsap.to(elem, {
-		transform: "translateX(0) rotateX(5deg)",
-		duration: 4,
-		scrollTrigger: {
-			trigger: "#marque #slide2 h1",
-			scroller: "#main",
-			start: "top 65%",
-			end: "top -10%",
-			// markers: true,
-			scrub: 2,
-		},
-	});
-});
-
-// projects rows animation
-// gsap.from("#projects .projrow", {
-// 	gap: "8vw",
-// 	rotate: "-10deg",
-// 	opacity: 0,
-// 	ease: Expo.easeInOut.power2,
-// 	scrollTrigger: {
-// 		// scrub: 1,
-// 		scroller: "body",
-// 		trigger: "#projects .projrow",
-// 		// markers: true,
-// 		start: "top 60%",
-// 		end: "top -20%",
-// 	},
-// });
 
 // footer
 
@@ -413,3 +364,90 @@ function cursoranima() {
 	});
 }
 cursoranima();
+
+// textanimation
+// splitting text into words
+
+const text = document.querySelector(".txtanim");
+text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+// anime
+// 	.timeline({
+// 		loop: true,
+// 	})
+// 	.add({
+// 		targets: '.txtanim span',
+// 		translateY: [-600, 0],
+// 		scale: [10, 1],
+// 		opacity: [0, 1],
+// 		easing: "easeOutExpo",
+// 		duration: 1500,
+// 		delay: AnimationEffect.stagger(100),
+// 	});
+
+var a1 = gsap.timeline({
+	repeat: -1,
+});
+a1.from(".txtanim span", {
+	translateX: "900px",
+	scale: 8,
+	marginRight: "20px",
+	opacity: 0,
+	ease: Expo.easeOut,
+	// duration: 1,
+	stagger: 0.3,
+})
+	.to(".txtanim span", {
+		translateX: "0px",
+		scale: 1,
+		marginRight: "0px",
+		opacity: 1,
+		ease: Expo.easeOut,
+		stagger: 0.3,
+	})
+	.to(".txtanim span", {
+		translateX: "-900px",
+		opacity: 0,
+		scale: 8,
+		ease: Expo.easeOut,
+		stagger: 0.3,
+	})
+	.to(".txtanim span", {
+		translateX: "0px",
+		opacity: 1,
+		scale: 1,
+		ease: Expo.easeOut,
+		stagger: 0.3,
+	})
+	.to(".txtanim span", {
+		translateY: "200px",
+		opacity: 0,
+		scale: 10,
+		ease: Expo.easeOut,
+		stagger: 0.3,
+	});
+
+const cnt = document.querySelector("#projhead");
+for (var i = 0; i < 100; i++) {
+	const blocks = document.createElement("div");
+	blocks.classList.add("block");
+	cnt.appendChild(blocks);
+}
+function animateblocks() {
+	anime({
+		targets: ".block",
+		translateX: function () {
+			return anime.random(-700, 700);
+		},
+		translateY: function () {
+			return anime.random(-500, 500);
+		},
+		scale: function () {
+			return anime.random(1, 4);
+		},
+		easing: "linear",
+		duration: 3000,
+		delay: anime.stagger(10),
+		complete: animateblocks,
+	});
+}
+animateblocks();
